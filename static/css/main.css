@@ -1,3 +1,7 @@
 .main_wrapper{
     background-color: white;
 }
+
+.canvas {
+    background-color: red;
+}
