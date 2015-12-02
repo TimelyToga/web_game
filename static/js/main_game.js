@@ -3,18 +3,14 @@
  */
 
 function init() {
-    var stage = new createjs.Stage("demoCanvas");
-
-    var circle = new createjs.Shape();
-    circle.graphics.beginFill("DeepSkyBlue").drawCircle(0, 0, 50);
-    circle.x = 100;
-    circle.y = 100;
-    circle.addEventListener("click", handleClick);
-    stage.addChild(circle);
-    stage.update();
+    var stage = new createjs.SpriteStage("canvasElementId", false, false);
+    stage.updateViewport(800, 600);
+    var image = new createjs.Bitmap("/../img/survival_figure.png");
+    stage.addChild(image);
     createjs.Ticker.addEventListener("tick", handleTick);
+
     function handleTick(event) {
-        circle.x += 1;
+        image.x += 10;
         stage.update();
     }
 }
