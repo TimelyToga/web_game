@@ -3,4 +3,7 @@ __author__ = 'Tim'
 from django.shortcuts import render
 
 def home(request):
-    return render(request, 'base.html',{})
+    return render(request, 'main.html', {})
+
+def about(request):
+    return render(request, 'about.html', {})
