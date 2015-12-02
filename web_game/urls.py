@@ -19,4 +19,5 @@ from django.contrib import admin
 
 urlpatterns = patterns("",
     url(r'^$', 'web_game.handler.home'),
+    url(r'^about$', 'web_game.handler.about'),
     )

@@ -5,10 +5,20 @@
     <title>Web Game</title>
     <script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
     <link href="/../static/css/main.css" rel="stylesheet"/>
+
+    {% block header %}
+    {% endblock header %}
+
+    {% block scripts %}
+    {% endblock scripts %}
+
 </head>
 <body>
 <div class="main_wrapper">
     <span>Hey, bitch.</span>
+
+   {% block content %}
+   {% endblock content %}
 </div>
 </body>
 </html>
